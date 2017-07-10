@@ -1,0 +1,51 @@
+import tkinter as tk # GUI library for python
+import webbrowser # opens up web browser from our code
+
+URL = 'https://github.com'
+
+#create event handler function for doorbell button
+def doorbell(event):
+    print ("You rang the doorbell!")
+
+
+#create event handler function to open github website
+def open_website(event):
+    webbrowser.open_new_tab(URL)
+
+#create event handler function to open github website to jen8 directory
+def open_directory(event):
+    webbrowser.open_new_tab(URL + '/jen8')
+
+window = tk.Tk()
+window.geometry("300x200") # set width and height
+
+
+alabel = tk.Label(text="Banana") # add label with text 
+alabel.grid(column=0, row=0)  # set position  
+
+blabel = tk.Label(text="Apple") # add label with text
+blabel.grid(column=1, row=0) # set position
+
+clabel = tk.Label(text="Directory")
+clabel.grid(column=2, row=0)
+
+
+
+button = tk.Button(window, text="doorbell") # adding button with text doorbell
+button.grid(column=0) # set position
+
+button2 = tk.Button(window, text="Github") # adding button with text 10
+button2.grid(column=1, row=1) # set position
+
+button3 = tk.Button(window, text="Github Directory")
+button3.grid(column=2, row=1)
+
+# when doorbell button is clicked trigger event handler fx
+button.bind("<Button-1>", doorbell)
+button2.bind("<Button-1>", open_website)
+button3.bind("<Button-1>", open_directory)
+
+
+window.mainloop() # creates window
+
+    
