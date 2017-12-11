@@ -1,9 +1,9 @@
-class Fighters:
+class Competitors:
     def __init__(self, name):
         self.name = name
 
-qazi = Fighters("Qazi")
-bob = Fighters("Cat")
+robin = Fighters("Robin")
+eli = Fighters("Eli")
 
-print(qazi.name)
-print(bob.name)
+print(robin.name)
+print(eli.name)
