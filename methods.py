@@ -1,39 +1,39 @@
-class Fighter:
+class Competitor:
     def __init__(self, name):
         self.name = name
         self.health = 100
         self.damage = 10
 
-    def attack(self, other_guy):
-        other_guy.health = other_guy.health - self.damage
-        print ("{} attacks {}!".format(self.name, other_guy.name))
-        print ("{} loses {}!".format(other_guy.name, self.damage))
+    def attack(self, other_competitor):
+        other_competitor.health = other_competitor.health - self.damage
+        print ("{} attacks {}!".format(self.name, other_competitor.name))
+        print ("{} loses {}!".format(other_competitor.name, self.damage))
 
     def __str__(self):
         return "{}: {}".format(self.name, self.health)
 
 
 
-qazi = Fighter("Qazi")
-you = Fighter("Matt")
+Henry = Competitor("Henry")
+you = Competitor("Linda")
 
-print(qazi) # prints <__main__.Fighter object at 0X102142668>
+print(Henry) # prints <__main__.Fighter object at 0X102142668>
 print (you)
 
-you.attack(qazi)
-print(qazi) # prints 90, which is 100 - 10
+you.attack(Henry)
+print(Henry) # prints 90, which is 100 - 10
 
 
-class Boxer(Fighter): # Boxer inherits from Fighter Class
+class Kick_Boxer(Competitor): # Boxer inherits from Fighter Class
     def heal(self):
         self.health += 10 
     
 
-boxer_qazi = Boxer("Boxer Qazi") # Boxer requires names bc it inherits from Fighter
-print(boxer_qazi)  # since boxer inherits from fighter, has these attributes + __str
-print(boxer_qazi.damage)
-print(boxer_qazi.health)
+kick_boxer_henry = Kick_Boxer("Kick_Boxer Henry") # Boxer requires names bc it inherits from Fighter
+print(kick_boxer_henry)  # since boxer inherits from fighter, has these attributes + __str
+print(kick_boxer_henry.damage)
+print(kick_boxer_henry.health)
 
-boxer_qazi.heal()
+kick_boxer_henry.heal()
 
-print(boxer_qazi)
+print(kick_boxer_henry)
