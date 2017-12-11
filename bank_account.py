@@ -12,15 +12,15 @@ class BankAccount:
     def __str__(self):
         return "{} Amount: {}".format(self.account_type, self.amount)
 
-qazi = BankAccount("Checkings", 100)
-print(qazi.account_type)
-print(qazi.amount)
+stephanie = BankAccount("Checkings", 100)
+print(stephanie.account_type)
+print(stephanie.amount)
 
-qazi.deposit(30)
-print(qazi.amount)
+stephanie.deposit(30)
+print(stephanie.amount)
 
-qazi.withdraw(45)
-print(qazi.amount)
+stephanie.withdraw(45)
+print(stephanie.amount)
 
-print(qazi) # after adding __str__ method we will see str rep instead of object
+print(stephanie) # after adding __str__ method we will see str rep instead of object
 
