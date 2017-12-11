@@ -5,14 +5,14 @@ class Student:
         self.grade = grade
         self.age = age
 
-kitty = Student('Kitty', 85, 30)
-daniel = Student('Daniel', 80, 15)
+chris = Student('Chris', 85, 30)
+rebecca = Student('Rebecca', 80, 15)
 
-print(kitty.name)
-print(daniel.name)
+print(chris.name)
+print(rebecca.name)
 
-print(kitty.grade)
-print(daniel.grade)
+print(chris.grade)
+print(rebecca.grade)
 
-print(kitty.age)
-print(daniel.age)
+print(chris.age)
+print(rebecca.age)
