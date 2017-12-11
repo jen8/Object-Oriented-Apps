@@ -1,15 +1,15 @@
-class BestCourse:
-    website = "http://cleverprogrammer.com"
+class BestTechReviews:
+    website = "http://cnet.com"
 
     def __init__(self, name):
         self.name = name
 
-python_course = BestCourse("Learn Python")
-learn_command_line_course = BestCourse("Learn Command Line")
+iphone_review = BestTechReviews("Apple iPhone 5 Review")
+samsung_phone_review = BestCourse("Samsung Galaxy S5 Review")
 
 
-print(python_course.name)
-print(BestCourse.website)
+print(iphone_review.name)
+print(BestTechReviews.website)
 
-print(learn_command_line_course.name)   # objectname.method, both prints same website
-print(BestCourse.website)                     # Classname.method
+print(samsung_phone_review.name)   # objectname.method, both prints same website
+print(BestTechReviews.website)                     # Classname.method
